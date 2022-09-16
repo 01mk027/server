@@ -1836,7 +1836,7 @@ console.log(incidentMessage);
 
 
 
-const w = new WebSocket(`${clientIp}`);//Çare promise olabilir.
+const w = new WebSocket('ws://3.89.102.141:8001/');//Çare promise olabilir.
 let incomingMessage = null;
 
 
