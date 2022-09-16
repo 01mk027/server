@@ -1165,8 +1165,10 @@ var xml = require('fs').readFileSync('centralsystem.wsdl', 'utf8');
 
 
 
-let ownIp = 'http://44.210.129.160/';
-let clientIp = 'http://100.24.58.180/';
+let ownIp = 'http://184.72.207.45:8000/';
+let clientIp = 'http://3.89.102.141:8001/';
+
+
 
 
 
