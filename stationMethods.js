@@ -1224,6 +1224,7 @@ var request2 = {
     }
 };
 
+/*
 function getResetResult(stationId, remoteAddress, args, callback){
   soap.createClient('http://localhost:8001/wsdl?wsdl', {forceSoap12Headers: true}, function(error, client){
     if(error)
@@ -1245,7 +1246,7 @@ function getResetResult(stationId, remoteAddress, args, callback){
 
   })
 }
-
+*/
 /*
 getResetResult(request2, function(result){
     console.log("Inside second client req.");
@@ -1265,7 +1266,7 @@ var changeAvailabilityRequest= {
     }
   }
 
-
+/*
 function changeAvailability(stationId, remoteAddress, args, callback)
 {
    soap.createClient('http://localhost:8001/wsdl?wsdl', {forceSoap12Headers: true}, function (error, client){
@@ -1285,7 +1286,7 @@ function changeAvailability(stationId, remoteAddress, args, callback)
       //console.log(client.describe());
    })
 }
-
+*/
 /////////////////////////////////////////////////// CHANGE AVAILABILITY /////////////////////////////////////////////////////////////////////
 
 
@@ -1293,7 +1294,7 @@ function changeAvailability(stationId, remoteAddress, args, callback)
 
 let getDiagnosticsRequest = {
   getDiagnosticsRequest:{
-    location: 'http://localhost:8001/wsdl',
+    location: `${clientIp}wsdl`,
     startTime: moment(),
     stopTime: moment().add(30, 'minutes'),
     retries: 30,
@@ -1301,6 +1302,7 @@ let getDiagnosticsRequest = {
   }
 };
 
+/*
 function getDiagnostics(stationId, remoteAddress, args, callback)
 {
     soap.createClient('http://localhost:8001/wsdl?wsdl', {forceSoap12Headers: true}, function (error, client){
@@ -1320,7 +1322,7 @@ function getDiagnostics(stationId, remoteAddress, args, callback)
           //console.log(client.describe());
        })
     }
-
+*/
 ////////////////////////////////////////////////// GET DIAGNOSTICS /////////////////////////////////////////////////////////////////////////
 
 
@@ -1329,6 +1331,8 @@ function getDiagnostics(stationId, remoteAddress, args, callback)
 let clearCacheRequest = {
   clearCacheRequest:{}
 };
+
+/*
 function clearCache(stationId, remoteAddress, args, callback)
 {
     soap.createClient('http://localhost:8001/wsdl?wsdl', {forceSoap12Headers: true}, function (error, client){
@@ -1349,7 +1353,7 @@ function clearCache(stationId, remoteAddress, args, callback)
        })
 
 }
-
+*/
 ///////////////////////////////////////////////// CLEARCACHE //////////////////////////////////////////////////////////////////////////////
 
 
@@ -1358,11 +1362,13 @@ function clearCache(stationId, remoteAddress, args, callback)
 let updateFirmwareRequest = {
   updateFirmwareRequest:{
     //retrieveDate: Date.now(),
-    location: 'http://localhost:8001/wsdl',//Bellenimin alınacağı adres. (Firmware nereden alınacaksa oranın adresi.)
+    location: `${clientIp}wsdl`,//Bellenimin alınacağı adres. (Firmware nereden alınacaksa oranın adresi.)
     retries: 300,
     retryInterval: 2500
   }
 };
+
+/*
 function updateFirmware(stationId, remoteAddress, args, callback)
 {
     soap.createClient('http://localhost:8001/wsdl?wsdl', {forceSoap12Headers: true}, function (error, client){
@@ -1382,7 +1388,7 @@ function updateFirmware(stationId, remoteAddress, args, callback)
           //console.log(client.describe());
        })
 }
-
+*/
 ///////////////////////////////////////////////// UPDATEFIRMWARE //////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////// CHANGECONFIGURATION //////////////////////////////////////////////////////////////////////////////
@@ -1394,6 +1400,7 @@ let changeConfigurationRequest = {
   }
 };
 
+/*
 function changeConfiguration(stationId, remoteAddress, args, callback)
 {
     soap.createClient('http://localhost:8001/wsdl?wsdl', {forceSoap12Headers: true}, function (error, client){
@@ -1413,7 +1420,7 @@ function changeConfiguration(stationId, remoteAddress, args, callback)
           //console.log(client.describe());
        })
 }
-
+*/
 ///////////////////////////////////////////////// CHANGECONFIGURATION //////////////////////////////////////////////////////////////////////////////
 
 
@@ -1434,7 +1441,7 @@ function changeConfiguration(stationId, remoteAddress, args, callback)
     }
   };
 
-
+/*
   function remoteStartTransaction(stationId, remoteAddress, args, callback)
   {
       soap.createClient('http://localhost:8001/wsdl?wsdl', {forceSoap12Headers: true}, function (error, client){
@@ -1454,7 +1461,7 @@ function changeConfiguration(stationId, remoteAddress, args, callback)
             //console.log(client.describe());
          })
   }
-
+*/
 ///////////////////////////////////////////////// REMOTESTARTTRANSACTION //////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////// REMOTESTOPTRANSACTION //////////////////////////////////////////////////////////////////////////////
@@ -1471,6 +1478,7 @@ let faultedRemoteStopTransactionRequest = {
   }
 };
 
+/*
 function remoteStopTransaction(stationId, remoteAddress, args, callback)
 {
     soap.createClient('http://localhost:8001/wsdl?wsdl', {forceSoap12Headers: true}, function (error, client){
@@ -1490,7 +1498,7 @@ function remoteStopTransaction(stationId, remoteAddress, args, callback)
           //console.log(client.describe());
        })
 }
-
+*/
 ///////////////////////////////////////////////// REMOTESTOPTRANSACTION //////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////// CANCELRESERVATION //////////////////////////////////////////////////////////////////////////////
@@ -1501,6 +1509,7 @@ let cancelReservationRequest = {
     }
 };
 
+/*
 function cancelReservation(stationId, remoteAddress, args, callback){
     soap.createClient('http://localhost:8001/wsdl?wsdl', {forceSoap12Headers: true}, function (error, client){
         if(error)
@@ -1520,7 +1529,7 @@ function cancelReservation(stationId, remoteAddress, args, callback){
        })
 
 }
-
+*/
 ///////////////////////////////////////////////// CANCELRESERVATION //////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////// DATATRANSFER //////////////////////////////////////////////////////////////////////////////
@@ -1533,6 +1542,7 @@ let dataTransferRequest = {
   }
 };
 
+/*
 function dataTransfer(stationId, remoteAddress, args, callback){
     soap.createClient('http://localhost:8001/wsdl?wsdl', {forceSoap12Headers: true}, function (error, client){
         if(error)
@@ -1550,7 +1560,7 @@ function dataTransfer(stationId, remoteAddress, args, callback){
           //console.log(client.describe());
        })
 }
-
+*/
 ///////////////////////////////////////////////// DATATRANSFER //////////////////////////////////////////////////////////////////////////////
 
 
@@ -1561,6 +1571,8 @@ let getConfigurationRequest = {
     key: "JWXaksjlkaxsndhajlsdASFDKAWE^34345sadfkjdna.qaca"
   }
 };
+
+/*
 
 function getConfiguration(stationId, remoteAddress, args, callback)
 {
@@ -1580,6 +1592,7 @@ function getConfiguration(stationId, remoteAddress, args, callback)
           //console.log(client.describe());
        })
 }
+*/
 ///////////////////////////////////////////////// GETCONFIGURATION //////////////////////////////////////////////////////////////////////////////
 let getLocalListVersionRequest = {
     getLocalListVersionRequest:{
@@ -1587,6 +1600,7 @@ let getLocalListVersionRequest = {
     }
 }
 
+/*
 function getLocalListVersion(stationId, remoteAddress, args, callback)
 {
     soap.createClient('http://localhost:8001/wsdl?wsdl', {forceSoap12Headers: true}, function (error, client){
@@ -1606,7 +1620,7 @@ function getLocalListVersion(stationId, remoteAddress, args, callback)
           //console.log(client.describe());
        })
 }
-
+*/
 ///////////////////////////////////////////////// GETCONFIGURATION //////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////// RESERVENOW  ///////////////////////////////////////////////////////////////////////////////////
@@ -1620,7 +1634,7 @@ let reserveNowRequest = {
     reservationId: 789456123
   }
 };
-
+/*
 function reserveNow(stationId, remoteAddress, args, callback){
     soap.createClient('http://localhost:8001/wsdl?wsdl', {forceSoap12Headers: true}, function (error, client){
         if(error)
@@ -1639,6 +1653,7 @@ function reserveNow(stationId, remoteAddress, args, callback){
           //console.log(client.describe());
        })
 }
+*/
 ///////////////////////////////////////////////// RESERVENOW  ///////////////////////////////////////////////////////////////////////////////////
 
 
@@ -1659,6 +1674,7 @@ let sendLocalListRequest = {
     }
 };
 
+/*
 function sendLocalList(stationId, remoteAddress, args, callback)
 {
     soap.createClient('http://localhost:8001/wsdl?wsdl', {forceSoap12Headers: true}, function (error, client){
@@ -1678,7 +1694,7 @@ function sendLocalList(stationId, remoteAddress, args, callback)
           //console.log(client.describe());
        })
 }
-
+*/
 ////////////////////////////////////////////////////////// SENDLOCALLIST /////////////////////////////////////////////////////////////////////////////////////
 
 
